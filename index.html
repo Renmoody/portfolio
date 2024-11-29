@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ren Moody Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ren Moody's personal portfolio website showcasing projects and experience in software development.">
+        <meta name="keywords" content="Ren Moody, portfolio, software developer, projects, computer science, Christopher Newport University">
+        <title>Ren Moody Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
 <body>
     <header>
         <div class="container">
@@ -13,15 +16,13 @@
             <p>Welcome to my Portfolio!</p>
             <nav>
                 <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/Renmoody">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/ren-moody/">LinkedIn</a></li>
+                    <li><a href="https://github.com/Renmoody" target="_blank" aria-label="GitHub Profile" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/ren-moody/" target="_blank" aria-label="LinkedIn Profile" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>                    
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="lines">
         <div class="line"></div>
         <div class="line"></div>
@@ -29,8 +30,11 @@
       </div>
     <section id="about">
         <div class="container">
+            <img src="profile.jpg" alt="About Me" class="profile-pic">
+            <div class="about-text">
             <h2>About Me</h2>
             <p>Hello! I’m Ren Moody, I am a Computer Science student at Christopher Newport University seeeking internship opportunities! I am a passionate developer with a love for creating efficient and functional software. My journey in development has equipped me with a diverse skill set, from frontend technologies to backend solutions.</p>
+            </div>
         </div>
     </section>
 
@@ -38,7 +42,7 @@
         <div class="container">
             <h2>Projects</h2>
             <div class="project">
-                <h3>StudyGo - September-December 2024 (In progress)</a></h3>
+                <h3><a href="https://github.com/Renmoody/capstone" target="_blank">StudyGo - September-December 2024 (In progress)</a></h3>
                 <p>StudyGo is an academic social media app with the goal of facilitating good study habits for 
                     students and raising the average GPA of participating Universities and consequently their students. 
                     This will be achieved by incentivizing studying at different locations near campus through giving 
@@ -50,7 +54,7 @@
                     android, and ios applications.</p>
             </div>
             <div class="project">
-                <h3>Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024</h3>
+                <h3><a href="https://github.com/Renmoody/Frooble" target="_blank">Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024</a></h3>
                 <p>This application was built in a team of four people. Our team had 24 hours to code a project from scratch and compete for prizes. Our goal 
                     was to create an application that protected the public against harm. Our idea was Fruble. This project is geared towards public safety. 
                     Unfortunately, people end up in positions where they need help but cannot use their mobile device due to dangerous conditions. 
@@ -63,28 +67,7 @@
             <!-- Add more projects as needed -->
         </div>
     </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out through the contact form below or connect with me on social media. The php script is not finished yet so please contact me through LinkedIn!</p>
-            <form action="send_email.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-                <button type="LinkedIn"><a class = formButton href="https://www.linkedin.com/in/ren-moody/">LinkedIn</a></button>
-                
-            </form>
-        </div>
-    </section>
-
+    
     <footer>
         <div class="container">
             <p>&copy; 2024 Ren Moody. All rights reserved.</p>

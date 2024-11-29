@@ -13,6 +13,7 @@ body {
     background: linear-gradient(-45deg, #3c3c3c, #747474, #2c2c2b);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    background-attachment: fixed; /* Prevents background movement on scroll */
 }
 
 @keyframes gradient {
@@ -30,7 +31,7 @@ body {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
+    overflow: visible;
 }
 
 /* Header Styling */
@@ -64,12 +65,15 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    
+    display: inline-block; /* Prevents text shifting */
+    transition: transform 0.2s ease; /* Smooth scaling animation */
 }
+
 nav ul li a:hover {
     text-decoration: underline;
-    
+    transform: scale(2); /* Slightly enlarge on hover */
 }
+
 
 /* Section Styling */
 section {
@@ -81,15 +85,31 @@ section h2 {
     color: white;
 }
 section a {
-    padding-top: 10px;
+    position: relative; /* Needed for pseudo-element positioning */
     color: white;
     text-decoration: none;
-    
-}
-section a:hover {
-    text-decoration:underline; 
+    display: inline-block; /* Prevents shifting */
 }
 
+section a::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Start from the center */
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    transition: width 0.4s ease, left 0.4s ease; /* Smooth animation */
+}
+
+section a:hover::after {
+    width: 100%; /* Adjust this value to control underline length */
+    left: 0; /* Center the shorter underline */
+}
+
+
+
+/* Add scaling transition to project */
 .project {
     background: transparent;
     padding: 10px;
@@ -97,54 +117,29 @@ section a:hover {
     border: 1px solid #a4a4a4;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* Contact Form Styling */
-form {
-    background: transparent;
-    padding: 20px;
-    border: 1px solid #a4a4a4;
-    border-radius: 5px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-
-    margin-bottom: 10px;
-    border: 1px solid #a4a4a4;
-    border-radius: 5px;
-}
-
-form button {
-    background: #5c6a70;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.formButton{
-    color: #fff;
-    text-decoration: none;
-}
-.formButton:hover{
-    text-decoration: none;
-}
-form button:hover {
-    background: #555;
+/* Hover effect: scale and shadow change */
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
 /* Footer Styling */
 footer {
     background: #333;
-    color: #fff;
+    color: #f0f0f0; /* High-contrast text color */
     padding: 10px 0;
     text-align: center;
+}
+/* Profile Picture Styling */
+.profile-pic {
+    display: block;
+    margin: 0 auto 20px; /* Center the image and add bottom margin */
+    width: 150px; /* Larger size for better visibility */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
 }
