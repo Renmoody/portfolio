@@ -143,3 +143,42 @@ footer {
     border-radius: 50%;
     object-fit: cover;
 }
+
+.project-content {
+  display: flex;
+  gap: 20px;
+}
+
+.project-content p {
+  flex: 1;
+  max-width: 50%;
+  line-height: 1.6;
+  margin: 0;
+  padding: 15px;
+}
+
+.video-container {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically relative to text */
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 400px;  /* cap video width */
+  max-height: 400px; /* cap video height */
+  object-fit: contain; /* prevent it from stretching */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.video-container video:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+
