@@ -182,3 +182,20 @@ footer {
 }
 
 
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .project-content {
+    flex-direction: column; /* stack text above video */
+    align-items: center;    /* center everything */
+  }
+
+  .project-content p,
+  .video-container {
+    max-width: 100%;  /* let them take full width */
+  }
+
+  .video-container video {
+    max-width: 90%;   /* smaller than full width */
+    max-height: 200px;
+  }
+}
