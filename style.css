@@ -180,6 +180,43 @@ footer {
   transform: scale(1.1);
   z-index: 10;
 }
+.showcase-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;            /* space between video and images */
+}
+
+.video-container video {
+  max-width: 500px;     /* or set % if you want it flexible */
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.scrolling-images {
+  height: 200px;       /* window size */
+  width: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-track {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-y 9s linear infinite;
+}
+
+.image-track img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-y {
+  -100%   { transform: translateY(0); }
+  100% { transform: translateY(-50%); } /* move up by one set */
+}
 
 
 @media (max-width: 768px) {
@@ -207,5 +244,18 @@ footer {
     height: 100%;
     object-fit: contain;     /* show full video without cropping */
     border-radius: 10px;
+  }
+   .showcase-container {
+    flex-direction: column; /* stack on small screens */
+  }
+
+  .scrolling-images {
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+  }
+
+  .image-track img {
+    max-width: 100px; /* slightly smaller for phones */
   }
 }
