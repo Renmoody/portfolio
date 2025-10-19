@@ -204,6 +204,7 @@ footer {
   display: flex;
   flex-direction: column;
   animation: scroll-y 9s linear infinite;
+
 }
 
 .image-track img {
