@@ -75,9 +75,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
   transform: scale(2);
-  /* Slightly enlarge on hover */
+
 }
 
 
@@ -100,19 +99,15 @@ section a {
   /* Prevents shifting */
 }
 
-section a::after {
+.project a::after {
   content: '';
   position: absolute;
   left: 50%;
-  /* Start from the center */
   bottom: 0;
   width: 0;
   height: 1px;
-  /* Thickness of the underline */
   background-color: white;
-  /* Color of the underline */
   transition: width 0.4s ease, left 0.4s ease;
-  /* Smooth animation */
 }
 
 section a:hover::after {
@@ -137,7 +132,7 @@ section a:hover::after {
 }
 
 .project:target {
-  transform: scale(1.1);
+  transform: scale(1.06);
   box-shadow: 0 10px 30px #007bff45;
   background-color: #747474;
   border-color: #a4a4a4;
@@ -156,7 +151,7 @@ section a:hover::after {
   }
 
   100% {
-    transform: scale(1.1);
+    transform: scale(1.06);
   }
 }
 
