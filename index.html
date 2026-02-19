@@ -9,13 +9,13 @@
     <meta name="keywords"
         content="Ren Moody, portfolio, software developer, projects, computer science, Christopher Newport University">
     <title>Ren Moody Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <div class="container">
+        <div class="header">
             <h1>Ren Moody</h1>
             <p>Welcome to my Portfolio!</p>
             <nav>
@@ -29,11 +29,7 @@
         </div>
     </header>
 
-    <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
+
     <section id="about">
         <div class="container">
             <img src="portfoliopic.jpeg" alt="About Me" class="profile-pic">
@@ -77,61 +73,61 @@
                     to
                     proportions I was not prepared for. I acquired a Raspberry Pi 5 and immediately set up Pihole when
                     it arrived. After seeing the amount of ads and trackers blocked (40% on average)
-                    using some popular block-lists, I was hooked. Currently in the process of building NAS and having some home network services like Jellyfin, NFS. Currently I am running Docker to containerize my pi-hole setup!
+                    using some popular block-lists, I was hooked. Currently in the process of building NAS and having
+                    some home network services like Jellyfin, NFS. Currently I am running Docker to containerize my
+                    pi-hole setup!
                 </p>
             </div>
 
 
             <!-- StudyGo Project -->
-            <div class="project" id="studygo">
-                <h3>
-                    <a href="https://github.com/Renmoody/capstone" target="_blank">
-                        StudyGo - September-December 2024
-                    </a>
-                </h3>
-                <div class="showcase-container">
-                    <div class="project-content">
-                        <p>
-                            StudyGo is an academic social media app with the goal of facilitating good study habits for
-                            students and raising the average GPA of participating Universities and consequently their
-                            students.
-                            This will be achieved by incentivizing studying at different locations near campus through
-                            giving
-                            them discount codes at participating locations. These locations are intended to be business
-                            that create
-                            accounts on our app for advertising themselves and growing the relationship between the
-                            univerities and communities!
-                            This app will allow users to connect either one
-                            on one or by public group sessions through networking and a messaging platform. Students
-                            have the
-                            option to track their grades per class and see a visualization of study time to grade
-                            performance
-                            over a semester. Teachers will be able to use this app to set up different study events and
-                            companies can set-up study events as well. This will all be achievable through web browser,
-                            Android, and iOS applications. This project was the test run for our current project,
-                            Scholara.
-                        </p>
+            <div class="project project-split" id="studygo">
+                <div class="project-info">
+                    <h3>
+                        <a href="https://github.com/Renmoody/capstone" target="_blank">
+                            StudyGo - September-December 2024
+                        </a>
+                    </h3>
+                    <p>
+                        StudyGo is an academic social media app with the goal of facilitating good study habits for
+                        students and raising the average GPA of participating Universities and consequently their
+                        students.
+                        This will be achieved by incentivizing studying at different locations near campus through
+                        giving
+                        them discount codes at participating locations. These locations are intended to be business
+                        that create
+                        accounts on our app for advertising themselves and growing the relationship between the
+                        univerities and communities!
+                        This app will allow users to connect either one
+                        on one or by public group sessions through networking and a messaging platform. Students
+                        have the
+                        option to track their grades per class and see a visualization of study time to grade
+                        performance
+                        over a semester. Teachers will be able to use this app to set up different study events and
+                        companies can set-up study events as well. This will all be achievable through web browser,
+                        Android, and iOS applications. This project was the test run for our current project,
+                        Scholara.
+                    </p>
+                </div>
 
-                        <!-- Right: video -->
-                        <div class="video-container">
-                            <video autoplay muted loop>
-                                <source src="videos/Screen_recording_20241212_234307.webm" type="video/webm">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
+                <div class="video-container">
+
+                    <video src="videos/Screen_recording_20241212_234307.webm" muted loop autoplay playsinline>
+
+                        Your browser does not support the video tag.
+                    </video>
+
 
                 </div>
-            </div>
+                </div>
+                <!-- Frooble Project -->
+                <div class="project" id="frooble">
+                    <h3>
+                        <a href="https://github.com/Renmoody/Frooble" target="_blank">
+                            Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024
+                        </a>
+                    </h3>
 
-            <!-- Frooble Project -->
-            <div class="project" id="frooble">
-                <h3>
-                    <a href="https://github.com/Renmoody/Frooble" target="_blank">
-                        Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024
-                    </a>
-                </h3>
-                <div class="project-content">
                     <!-- Left: text -->
                     <p>
                         This application was built in a team of four people. Our team had 24 hours to code a project
@@ -149,8 +145,8 @@
                     </p>
 
 
+
                 </div>
-            </div>
 
 
     </section>
