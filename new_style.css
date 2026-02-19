@@ -154,7 +154,24 @@ header {
     z-index: 99999;
 }
 
-
+.project-split .split-object {
+    position: relative;
+    width: 40%;
+    aspect-ratio: 1/1.4;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: #000;
+    flex-shrink: 0;
+}
+.project .img {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+.img img{
+    width: 100%;
+}
 
 .video-container {
     position: relative;
