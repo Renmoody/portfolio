@@ -91,7 +91,7 @@ header {
 #skills-overview {
     position: sticky;
     top: 0;
-    z-index:100;
+    z-index: 100;
     background-color: var(--bg-color);
     padding: 1rem 0;
 }
@@ -99,8 +99,9 @@ header {
 #skills-overview.is-pinned {
     padding: 0.5rem 0;
 }
+
 #skills-overview.is-pinned h2 {
-    display: none; 
+    display: none;
 }
 
 .skills-hub {
@@ -160,7 +161,7 @@ header {
 .project h3 a {
     color: var(--secondary-color);
     text-decoration: none;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .project h3 a:hover {
@@ -169,15 +170,16 @@ header {
 
 
 .project h3 a::before {
-    content: '>'; 
+    content: '>';
     font-size: 0.8em;
     transition: margin-left 0.2s;
 }
 
 
 .project h3 a:hover::before {
-    margin-left: 5px; 
+    margin-left: 5px;
 }
+
 .project h3 a:active {
     opacity: 0.7;
     transform: scale(0.98);
@@ -205,13 +207,15 @@ header {
     background: #000;
     flex-shrink: 0;
 }
+
 .project .img {
     width: 100%;
     display: block;
     overflow: hidden;
     border-radius: var(--border-radius);
 }
-.img img{
+
+.img img {
     width: 100%;
 }
 
@@ -219,12 +223,12 @@ header {
     position: relative;
     cursor: pointer;
     width: 40%;
-    aspect-ratio: 1/1.4; 
+    aspect-ratio: 1/1.4;
     border-radius: var(--border-radius);
     overflow: hidden;
-    background: #000; 
-    flex-shrink: 0; 
-    align-self: flex-start; 
+    background: #000;
+    flex-shrink: 0;
+    align-self: flex-start;
 }
 
 .video-container video {
@@ -235,33 +239,33 @@ header {
 
 
 .tooltip {
-  border-bottom: 1px dotted #666; 
-  position: relative;
-  cursor: help;
+    border-bottom: 1px dotted #666;
+    position: relative;
+    cursor: help;
 }
 
 /* The Bubble */
 .tooltip::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 125%; 
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  padding: 8px;
-  border-radius: 5px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s;
-  z-index: 10;
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    z-index: 10;
 }
 
 .tooltip:hover::after {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -280,6 +284,16 @@ footer {
         text-align: center;
     }
 
+    #skills-overview {
+        background-color: transparent;
+    }
+    #skills-overview h2{
+        display: none;
+    }
+    #skills-overview p{
+        display: none;
+    }
+
     .header h1 {
         font-size: 2rem;
     }
@@ -292,8 +306,9 @@ footer {
         flex-basis: auto;
         width: 100%;
     }
+
     .project h3 a {
-        background-color: rgba(var(--secondary-color-rgb), 0.1); 
+        background-color: rgba(var(--secondary-color-rgb), 0.1);
         padding: 2px 6px;
         border-radius: 4px;
         font-weight: bold;
