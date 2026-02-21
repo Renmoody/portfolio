@@ -23,7 +23,7 @@
 
     <section id=about>
         <div class="container">
-            <img src="pi.jpeg" alt="raspberrypi" class="profile-pic">
+            <img src="/images/pi.jpeg" alt="raspberrypi" class="profile-pic">
             <div class="about-text">
                 <h2>The Beginning</h2>
                 <p>It all started when my brother began a networking class. I would hear him go on and on about data
@@ -35,7 +35,7 @@
     <section id="projects">
         <div class="container">
             <h2>Timeline</h2>
-            <div class="project">
+            <div class="project" tabindex="0">
                 <h3>The past</h3>
                 <p>I had been aware of the raspberry pis' existence for quite some time. However, I only recently
                     purchased one for myself. The reason being, I want to make a fun homelab. I have a background in
@@ -44,13 +44,13 @@
                     can test out new ideas for automation and learning.</p>
             </div>
 
-            <div class="project">
+            <div class="project" tabindex="0">
 
                 <h3>The present</h3>
                 <p>Currently, I have setup docker and pi-hole. I would like to learn more about vpn's and the risks
                     associated with portforwarding before I move on to my next step, WireGuard. </p>
                 <div class="img">
-                    <img src="pi_stats.png" id="pi-stats">
+                    <img src="/images/pi_stats.png" id="pi-stats">
                 </div>
                 <p>Along with pihole, I have configured a recursive DNS Cache using unbound. It was a bit of a hassle to
                     set up because I am still learning my way around docker. Regardless, it's up and running now, my
@@ -61,16 +61,23 @@
 
             </div>
 
-            <div class="project">
+            <div class="project" tabindex="0">
                 <h3>The future</h3>
                 <p>Waiting for updates...<br>
-                I have some ideas swimming around in my head about salvaging <span class="tooltip" data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span> from goodwill or yard sales and then building a frankenstein <span class="tooltip" data-tooltip="Network Attached Storage: Your own private cloud.">NAS</span>. However I also might spare myself the sanity and buy some new <span class="tooltip" data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span> for better speeds and reliability. 
+                    I have some ideas swimming around in my head about salvaging <span class="tooltip"
+                        data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span> from goodwill or
+                    yard sales and then building a frankenstein <span class="tooltip"
+                        data-tooltip="Network Attached Storage: Your own private cloud.">NAS</span>. However I also
+                    might spare myself the sanity and buy some new <span class="tooltip"
+                        data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span> for better speeds
+                    and reliability.
 
                 </p>
             </div>
             <!-- Congratulations for looking through my src code -->
         </div>
     </section>
+    <script src="script.js"></script>
 </body>
 
 </html>

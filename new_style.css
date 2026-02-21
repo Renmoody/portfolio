@@ -88,6 +88,21 @@ header {
 }
 
 /* Skills */
+#skills-overview {
+    position: sticky;
+    top: 0;
+    z-index:100;
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+}
+
+#skills-overview.is-pinned {
+    padding: 0.5rem 0;
+}
+#skills-overview.is-pinned h2 {
+    display: none; 
+}
+
 .skills-hub {
     display: flex;
     flex-wrap: wrap;
@@ -104,7 +119,8 @@ header {
     font-weight: 600;
     font-size: 0.9rem;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    /* transition: all 0.4s ease; */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
@@ -114,6 +130,13 @@ header {
     transform: scale(1.05);
 }
 
+.skill-tag.active-skill {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+
 /* Projects */
 #projects h2 {
     margin-bottom: 2rem;
@@ -121,6 +144,7 @@ header {
 }
 
 .project {
+    scroll-margin-top: 200px;
     background: var(--white);
     padding: 2rem;
     border-radius: var(--border-radius);
@@ -136,6 +160,7 @@ header {
 .project h3 a {
     color: var(--secondary-color);
     text-decoration: none;
+    cursor:pointer;
 }
 
 .project h3 a:hover {
@@ -155,7 +180,7 @@ header {
 }
 .project h3 a:active {
     opacity: 0.7;
-    transform: scale(0.98); /* Slight shrink effect */
+    transform: scale(0.98);
 }
 
 

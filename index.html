@@ -32,7 +32,7 @@
 
     <section id="about">
         <div class="container">
-            <img src="portfoliopic.jpeg" alt="About Me" class="profile-pic">
+            <img src="./images/pfp2.png" alt="About Me" class="profile-pic">
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>Hello! I’m Ren Moody, I am a Computer Science graduate of Christopher Newport University seeking job
@@ -49,12 +49,12 @@
             <h2>Skills</h2>
             <p>Click a skill to see it in action:</p>
             <div class="skills-hub">
-                <a href="#homelab" class="skill-tag">Linux/Networking</a>
-                <a href="#homelab" class="skill-tag">Automation</a>
-                <a href="#studygo" class="skill-tag">Java</a>
-                <a href="#studygo" class="skill-tag">Android Studio</a>
-                <a href="#studygo" class="skill-tag">Firebase</a>
-                <a href="#frooble" class="skill-tag">Python</a>
+                <a href="#homelab" class="skill-tag" data-skill="linux">Linux/Networking</a>
+                <a href="#homelab" class="skill-tag" data-skill="automation">Automation</a>
+                <a href="#studygo" class="skill-tag" data-skill="java">Java</a>
+                <a href="#studygo" class="skill-tag" data-skill="android-studio">Android Studio</a>
+                <a href="#studygo" class="skill-tag" data-skill="firebase">Firebase</a>
+                <a href="#frooble" class="skill-tag" data-skill="python">Python</a>
 
             </div>
         </div>
@@ -65,7 +65,7 @@
             <h2>Projects</h2>
 
             <!--Homelab-->
-            <div class="project" id="homelab">
+            <div class="project" id="homelab" data-skill="linux automation">
                 <h3>
                     <a href="homelab.html">
                         Homelab
@@ -83,7 +83,9 @@
 
 
             <!-- StudyGo Project -->
-            <div class="project project-split" id="studygo">
+            <div class="project project-split" id="studygo" data-skill="java android-studio firebase">
+
+
                 <div class="project-info">
                     <h3>
                         <a href="https://github.com/Renmoody/capstone" target="_blank">
@@ -123,7 +125,8 @@
                 </div>
             </div>
             <!-- Frooble Project -->
-            <div class="project" id="frooble">
+            <div class="project" id="frooble" data-skill="python">
+
                 <h3>
                     <a href="https://github.com/Renmoody/Frooble" target="_blank">
                         Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024
