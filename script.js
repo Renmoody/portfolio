@@ -1,8 +1,27 @@
 const projects = document.querySelectorAll('.project');
+const skillTags = document.querySelectorAll('.skill-tag');
 
+skillTags.forEach(tag => {
+    tag.addEventListener('click', (e) => {
+        skillTags.forEach(t => t.classList.remove('active-skill'));
+        projects.forEach(p => p.classList.remove('active-project'));
+        const projectID = tag.getAttribute('proj');
+        if (projectID) {
+            const siblingTags = document.querySelectorAll(`.skill-tag[proj="${projectID}"]`);
+            siblingTags.forEach(sibling => {
+                sibling.classList.add('active-skill');
+            });
 
-document.querySelectorAll('.project').forEach(project => {
+            document.getElementById(projectID).classList.add('active-project');
+        }
+    });
+});
+
+projects.forEach(project => {
     project.addEventListener('click', () => {
+        projects.forEach(p => p.classList.remove('active-project'));
+        project.classList.add('active-project');
+        skillTags.forEach(t => t.classList.remove('active-skill'));
         const skills = project.getAttribute('data-skill');
         if (skills) {
             const skillArray = skills.split(' ');
@@ -10,27 +29,11 @@ document.querySelectorAll('.project').forEach(project => {
                 const tag = document.querySelector(`.skill-tag[data-skill="${skillName}"]`);
                 if (tag) tag.classList.add('active-skill');
             });
+
         }
         project.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
 
-    project.addEventListener('mouseenter', () => {
-        const skills = project.getAttribute('data-skill');
-        if (skills) {
-            const skillArray = skills.split(' ');
-            skillArray.forEach(skillName => {
-                const tag = document.querySelector(`.skill-tag[data-skill="${skillName}"]`);
-                if (tag) tag.classList.add('active-skill');
-            });
-        }
-    });
-
-
-    project.addEventListener('mouseleave', () => {
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.classList.remove('active-skill');
-        });
-    });
 });
 const skillsSection = document.querySelector('#skills-overview');
 
@@ -40,3 +43,4 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(skillsSection);
+
