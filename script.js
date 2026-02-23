@@ -35,12 +35,23 @@ projects.forEach(project => {
     });
 
 });
+
 const skillsSection = document.querySelector('#skills-overview');
+const sentinel = document.querySelector('#skills-sentinel');
 
-const observer = new IntersectionObserver(
-    ([e]) => e.target.classList.toggle('is-pinned', e.intersectionRatio < 1),
-    { threshold: [1] }
-);
 
-observer.observe(skillsSection);
+
+// AI is so amazing for fixing js and css issues
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        // When the sentinel moves out of the top of the viewport
+        // entry.isIntersecting will be false
+        skillsSection.classList.toggle('is-pinned', !entry.isIntersecting);
+    });
+}, {
+    threshold: [0],
+    rootMargin: '0px 0px 0px 0px' 
+});
+
+observer.observe(sentinel);
 

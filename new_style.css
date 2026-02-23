@@ -90,20 +90,33 @@ header {
 }
 
 /* Skills */
+
+#skills-sentinel {
+    height: 0;
+    visibility: hidden;
+}
+
 #skills-overview {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: var(--bg-color);
-    padding: 1rem 0;
+    transition: padding 0.3s ease;
+    background: inherit;
 }
 
 #skills-overview.is-pinned {
     padding: 0.5rem 0;
 }
-
+#skills-overview h2 {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
 #skills-overview.is-pinned h2 {
-    display: none;
+    max-height: 0;
+    margin-bottom: 0;
+    opacity: 0;
+    pointer-events: none;   
 }
 
 .skills-hub {
