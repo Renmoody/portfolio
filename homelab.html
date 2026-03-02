@@ -67,15 +67,26 @@
                             done a
                             little bit more research, I would have known to containerize unbound so that I could bridge
                             the two
-                            which would lead to easier configuration of automation</p>
+                            which would lead to easier configuration of automation. (This is changed later)</p>
                     </li>
                     <li>
-                        The Pi <span class="tooltip"
+                        The Raspberrypi <span class="tooltip"
                             data-tooltip="Network Attached Storage: Your own private cloud.">NAS</span></span> is coming
                         along quite nicely. I have just obtained three 4TB Wester Digital Red Plus NAS <span
                             class="tooltip" data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span>.
                         With them I can use a penta SATA pi hat and 3d print a case for optimal cooling and aesthetic.
                         I'll also be able to run RAID 5 configuration to help performance and allow for data redundancy.
+                    </li>
+                    <li>
+                        I successfully set up tailscale (temporary VPN access until I configure WireGuard) and it has
+                        been great! I was able to set my pi's tailnet IP as my global DNS Server which allows any device
+                        on the tailnet to have the Pihole benefits (ad blocking). Along with that, I reconfigured
+                        unbound so that it is in a docker container. The reason being is now I have cronjob scheduling
+                        to update the Gravity list for the pi, and update the containers at 4am every day. Also, any
+                        device can access my
+                        Jellyfin server and stream video's remotely! This is only the beginning, now that I have remote
+                        access to my homelab I can replicate services that I currently pay for, host my own servers for
+                        webpages or games, any much more!
                     </li>
                 </ol>
             </div>
