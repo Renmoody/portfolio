@@ -67,7 +67,7 @@
                             done a
                             little bit more research, I would have known to containerize unbound so that I could bridge
                             the two
-                            which would lead to easier configuration of automation</p>
+                            which would lead to easier configuration of automation. (This is changed later)</p>
                     </li>
                     <li> <h3>Deprecated Idea</h3>
                         The Raspberry Pi <span class="tooltip"
@@ -80,6 +80,15 @@
                     <li>
                         I have forgone the idea of building the pi into a personal NAS. Considering the fact that I will have up to 10 active users at any given time, I have decided to go with a Dell Poweredge T320. With this addition, I am going to be upgrading the rig that I'm getting (Facebook Marketplace Special). I will be putting a Intel Xeon E5-2470 V2 SR19S 2.4GHz 10 Cores 20 Threads Processor in there. Should be plenty capable for my plans. With that, I am also getting 48GB of DDR3 RAM.
                     </li>
+                    <li>                        I successfully set up tailscale (temporary VPN access until I configure WireGuard) and it has
+                        been great! I was able to set my pi's tailnet IP as my global DNS Server which allows any device
+                        on the tailnet to have the Pihole benefits (ad blocking). Along with that, I reconfigured
+                        unbound so that it is in a docker container. The reason being is now I have cronjob scheduling
+                        to update the Gravity list for the pi, and update the containers at 4am every day. Also, any
+                        device can access my
+                        Jellyfin server and stream video's remotely! This is only the beginning, now that I have remote
+                        access to my homelab I can replicate services that I currently pay for, host my own servers for
+                        webpages or games, any much more!</li>
                 </ol>
             </div>
 
