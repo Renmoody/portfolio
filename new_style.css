@@ -9,7 +9,6 @@
     --border-radius: 12px;
 }
 
-/* Base styling */
 * {
     margin: 0;
     padding: 0;
@@ -27,16 +26,17 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
 main {
     position: relative;
 }
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Header & Nav */
 header {
     background: var(--secondary-color);
     color: var(--white);
@@ -61,16 +61,17 @@ header {
     color: var(--white);
     font-size: 1.5rem;
 }
+
 .header nav li {
     transition: transform 0.2s ease-out;
     transform: scale(1);
 }
+
 .header nav li:hover {
     transition: transform 0.2s ease;
     transform: scale(1.3);
 }
 
-/* About */
 #about .container {
     display: flex;
     align-items: center;
@@ -92,8 +93,6 @@ header {
     min-width: 300px;
 }
 
-/* Skills */
-
 #skills-sentinel {
     position: absolute;
     top: 40vh;
@@ -114,8 +113,8 @@ header {
 #skills-overview.is-pinned {
     padding: 0.5rem 0;
 }
-#skills-overview h2 {
 
+#skills-overview h2 {
     transition: 
         opacity 0.8s ease, 
         max-height 0.5s ease 0.3s, 
@@ -126,6 +125,7 @@ header {
     overflow: hidden;
     margin-bottom: 1rem;
 }
+
 #skills-overview.is-pinned h2 {
     opacity: 0;
     max-height: 0;
@@ -164,8 +164,6 @@ header {
     transform: scale(1.05);
 }
 
-
-/* Projects */
 #projects h2 {
     margin-bottom: 2rem;
     text-align: center;
@@ -202,13 +200,11 @@ header {
     color: var(--primary-color);
 }
 
-
 .project h3 a::before {
     content: '>';
     font-size: 0.8em;
     transition: margin-left 0.2s;
 }
-
 
 .project h3 a:hover::before {
     margin-left: 5px;
@@ -218,7 +214,6 @@ header {
     opacity: 0.7;
     transform: scale(0.98);
 }
-
 
 .project-split {
     display: flex;
@@ -232,16 +227,6 @@ header {
     z-index: 99999;
 }
 
-.project-split .split-object {
-    position: relative;
-    width: 40%;
-    aspect-ratio: 1/1.4;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    background: #000;
-    flex-shrink: 0;
-}
-
 .project .img {
     width: 100%;
     display: block;
@@ -251,6 +236,36 @@ header {
 
 .img img {
     width: 100%;
+}
+
+.lab-intro-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.lab-description {
+    flex: 1; /* Changed from 2 to 1 for a 50/50 split */
+}
+
+.lab-image-container {
+    flex: 1; /* Matches the text container */
+    min-width: 250px; 
+}
+
+#lab-img {
+    width: 100%;
+    height: 300px; /* Increased height to maintain a better aspect ratio */
+    object-fit: cover;
+    object-position: center 80%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.lab-details-full {
+    width: 100%;
+    clear: both;
 }
 
 .video-container {
@@ -271,14 +286,12 @@ header {
     display: block;
 }
 
-
 .tooltip {
     border-bottom: 1px dotted #666;
     position: relative;
     cursor: help;
 }
 
-/* The Bubble */
 .tooltip::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -301,8 +314,6 @@ header {
     opacity: 1;
     visibility: visible;
 }
-
-
 
 footer {
     text-align: center;
@@ -332,13 +343,17 @@ footer {
         font-size: 2rem;
     }
 
-    .project-split {
+    .project-split, .lab-intro-wrapper {
         flex-direction: column;
     }
 
-    .project-split .video-container {
+    .project-split .video-container, .lab-image-container {
         flex-basis: auto;
         width: 100%;
+    }
+
+    #lab-img {
+        height: 300px;
     }
 
     .project h3 a {

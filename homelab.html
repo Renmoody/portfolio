@@ -48,7 +48,7 @@
 
                 <h3>The present</h3>
                 <ul>
-                    <li> 
+                    <li>
                         <p>Currently, I have setup docker and pi-hole. I would like to learn more about vpn's and the
                             risks
                             associated with portforwarding before I move on to my next step, WireGuard. </p>
@@ -69,7 +69,8 @@
                             the two
                             which would lead to easier configuration of automation. (This is changed later)</p>
                     </li>
-                    <li> <h3>Deprecated Idea</h3>
+                    <li>
+                        <h3>Deprecated Idea</h3>
                         The Raspberry Pi <span class="tooltip"
                             data-tooltip="Network Attached Storage: Your own private cloud.">NAS</span></span> is coming
                         along quite nicely. I have just obtained three 4TB Wester Digital Red Plus NAS <span
@@ -78,9 +79,13 @@
                         I'll also be able to run RAID 5 configuration to help performance and allow for data redundancy.
                     </li>
                     <li>
-                        I have forgone the idea of building the pi into a personal NAS. Considering the fact that I will have up to 10 active users at any given time, I have decided to go with a Dell Poweredge T320. With this addition, I am going to be upgrading the rig that I'm getting (Facebook Marketplace Special). I will be putting a Intel Xeon E5-2470 V2 SR19S 2.4GHz 10 Cores 20 Threads Processor in there. Should be plenty capable for my plans. With that, I am also getting 48GB of DDR3 RAM.
+                        I have forgone the idea of building the pi into a personal NAS. Considering the fact that I will
+                        have up to 10 active users at any given time, I have decided to go with a Dell Poweredge T320.
+                        With this addition, I am going to be upgrading the rig that I'm getting (Facebook Marketplace
+                        Special). I will be putting a Intel Xeon E5-2470 V2 SR19S 2.4GHz 10 Cores 20 Threads Processor
+                        in there. Should be plenty capable for my plans. With that, I am also getting 48GB of DDR3 RAM.
                     </li>
-                    <li>                        I successfully set up tailscale (temporary VPN access until I configure WireGuard) and it has
+                    <li> I successfully set up tailscale (temporary VPN access until I configure WireGuard) and it has
                         been great! I was able to set my pi's tailnet IP as my global DNS Server which allows any device
                         on the tailnet to have the Pihole benefits (ad blocking). Along with that, I reconfigured
                         unbound so that it is in a docker container. The reason being is now I have cronjob scheduling
@@ -89,7 +94,47 @@
                         Jellyfin server and stream video's remotely! This is only the beginning, now that I have remote
                         access to my homelab I can replicate services that I currently pay for, host my own servers for
                         webpages or games, any much more!</li>
-                </ol>
+                    </ol>
+            </div>
+            <div class="project" tabindex="0">
+                <h3>The New Lab</h3>
+
+                <div class="lab-intro-wrapper">
+                    <div class="lab-description">
+                        <ul>
+                            <li> Transitioning to the <strong>Dell PowerEdge T320</strong> was a massive leap forward.
+                                Moving away from the Raspberry Pi meant I finally had the PCIe lanes and ECC RAM
+                                necessary for a stable ZFS pool and multiple heavy Docker containers without
+                                hitting a hardware bottleneck every time someone started a stream.</li>
+                        </ul>
+                    </div>
+                    <div class="lab-image-container">
+                        <img src="./images/lab.jpeg" id="lab-img" alt="Dell Poweredge T320">
+                    </div>
+                </div>
+
+                <div class="lab-details-full">
+                    <ul>
+                        <li> With 10 cores and 48GB of RAM, this machine now handles media
+                            streaming via Jellyfin, and even a few game servers for friends. The goal is full
+                            service independence, and this hardware is the foundation that makes it possible
+                            to host everything locally with zero subscription fees. Next on the to-do list is cloud
+                            storage for files and images, which I have already laid the groundwork for.
+                        </li>
+                    </ul>
+                    <h3>The Software</h3>
+                    <ul>
+                        <li>
+                            To manage the server I am running Cockpit, which runs on top of Linux LTS. This provides a
+                            GUI for me to perform tasks that would take much longer in the command line. Although I
+                            still get plenty of time in the CLI through my management and creation of docker containers
+                            and scripting.
+                        </li>
+                    </ul>
+                    <div class="lab-image-container"><img src="./images/Cockpit.PNG" id="lab-img" alt="Cockpit"></div>
+
+
+                </div>
             </div>
 
             <div>
@@ -101,13 +146,19 @@
                 <ul>
                     <li>
                         <h3>Deprecated Plan</h3>
-                    To be able to contain my NAS, I will be 3d printing a case for it. There is a design I found online
-                    that allows for hot swappable drive bays, and good cooling. My biggest concern with this NAS is that
-                    the Pi runs quite hot. Heat and HDD's do not mix well and I would like their lifespan to be as long
-                    as possible.
+                        To be able to contain my NAS, I will be 3d printing a case for it. There is a design I found
+                        online
+                        that allows for hot swappable drive bays, and good cooling. My biggest concern with this NAS is
+                        that
+                        the Pi runs quite hot. Heat and HDD's do not mix well and I would like their lifespan to be as
+                        long
+                        as possible.
                     </li>
                     <li>
-                        I will be documenting the T320 build on here! I plan on upgrading my home network security and also turning my old house into a smart home. Along with that, I am hoping to achieve full service independence (at least from subscription services). I'll be sharing my triumphs and challenges during this journey and I hope some people follow along!
+                        I will be documenting the T320 build on here! I plan on upgrading my home network security and
+                        also turning my old house into a smart home. Along with that, I am hoping to achieve full
+                        service independence (at least from subscription services). I'll be sharing my triumphs and
+                        challenges during this journey and I hope some people follow along!
                     </li>
                 </ul>
             </div>
