@@ -1,168 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ren Moody's personal portfolio website showcasing projects and experience in software development.">
-    <meta name="keywords"
-        content="Ren Moody, portfolio, software developer, projects, computer science, Christopher Newport University">
-    <title>Ren Moody Portfolio</title>
+    <meta name="description" content="Ren Moody — CS Graduate, Software Developer, and Homelab Builder.">
+    <meta name="keywords" content="Ren Moody, portfolio, software developer, computer science, Christopher Newport University">
+    <title>Ren Moody</title>
     <link rel="stylesheet" href="new_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <div class="header">
-            <h1>Ren Moody</h1>
-            <p>Welcome to my Portfolio!</p>
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/Renmoody" target="_blank" aria-label="GitHub Profile"
-                            rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/ren-moody/" target="_blank" aria-label="LinkedIn Profile"
-                            rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-name">
+                <span class="name-label">Ren Moody</span>
+                <span class="status-badge">Open to Work</span>
+            </div>
+            <p class="header-tagline">CS Graduate &middot; Software Developer &middot; Homelab Builder</p>
+            <nav class="header-nav">
+                <a href="https://github.com/Renmoody" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" class="resume-nav-link">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
             </nav>
         </div>
     </header>
 
-
     <section id="about">
-        <div class="container">
-            <img src="./images/pfp2.png" alt="About Me" class="profile-pic">
+        <div class="container fade-up">
+            <img src="./images/pfp2.png" alt="Ren Moody" class="profile-pic">
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>Hello! I’m Ren Moody, I am a Computer Science graduate of Christopher Newport University seeking job
-                    opportunities!
-                    I am a passionate developer and hobbyist with a love for creating fun and useful projects.
-                    My journey in development has equipped me with a diverse skill set,
-                    from sleek frontend design to backend magic.</p>
+                <p>I'm a Computer Science graduate of Christopher Newport University (December 2025), seeking roles in software engineering, network engineering, and IT. My background spans full-stack development, backend systems, and network infrastructure — with hands-on experience running self-hosted services and managing home network architecture.</p>
+                <div class="about-meta">
+                    <span class="about-meta-item"><i class="fas fa-graduation-cap"></i> B.S. Computer Science &mdash; CNU, Dec 2025</span>
+                    <span class="about-meta-item"><i class="fas fa-map-marker-alt"></i> Virginia, USA</span>
+                </div>
+                <div class="target-roles">
+                    <span class="role-tag">Software Engineer</span>
+                    <span class="role-tag">Network Engineer</span>
+                    <span class="role-tag">IT / Systems</span>
+                </div>
             </div>
         </div>
     </section>
+
     <div id="skills-sentinel"></div>
+
     <section id="skills-overview">
         <div class="container">
-            <h2>Skills</h2>
-            <p>Click a skill to see it in action:</p>
+            <h2 class="skills-heading">Skills</h2>
+            <p class="skills-sub">Click a skill to see it in action</p>
             <div class="skills-hub">
-                <a href="#homelab" class="skill-tag" data-skill="linux" proj="homelab">Linux/Networking</a>
+                <a href="#homelab" class="skill-tag" data-skill="linux" proj="homelab">Linux / Networking</a>
                 <a href="#homelab" class="skill-tag" data-skill="automation" proj="homelab">Automation</a>
                 <a href="#studygo" class="skill-tag" data-skill="java" proj="studygo">Java</a>
                 <a href="#studygo" class="skill-tag" data-skill="android-studio" proj="studygo">Android Studio</a>
                 <a href="#studygo" class="skill-tag" data-skill="firebase" proj="studygo">Firebase</a>
                 <a href="#frooble" class="skill-tag" data-skill="python" proj="frooble">Python</a>
-
             </div>
         </div>
     </section>
-<main class="main-content">
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
 
-            <!--Homelab-->
-            <div class="project" id="homelab" data-skill="linux automation">
-                <h3>
-                    <a href="homelab.html">
-                        Homelab
-                    </a> - Click for updates!
-                </h3>
-                <p>My new pride and joy: This started as a mild fascination of networking. It has since started growing
-                    to
-                    proportions I was not prepared for. I acquired a Raspberry Pi 5 and immediately set up Pihole when
-                    it arrived. After seeing the amount of ads and trackers blocked (40% on average)
-                    using some popular block-lists, I was hooked. Currently in the process of building NAS and having
-                    some home network services like Jellyfin, NFS. Currently I am running Docker to containerize my
-                    pi-hole setup!
-                </p>
-            </div>
+    <main class="main-content">
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title fade-up">Projects</h2>
 
-
-            <!-- StudyGo Project -->
-            <div class="project project-split" id="studygo" data-skill="java android-studio firebase">
-
-
-                <div class="project-info">
-                    <h3>
-                        <a href="https://github.com/Renmoody/capstone" target="_blank">
-                            StudyGo - September-December 2024
-                        </a>
-                    </h3>
-                    <p>
-                        StudyGo is an academic social media app with the goal of facilitating good study habits for
-                        students and raising the average GPA of participating Universities and consequently their
-                        students.
-                        This will be achieved by incentivizing studying at different locations near campus through
-                        giving
-                        them discount codes at participating locations. These locations are intended to be business
-                        that create
-                        accounts on our app for advertising themselves and growing the relationship between the
-                        univerities and communities!
-                        This app will allow users to connect either one
-                        on one or by public group sessions through networking and a messaging platform. Students
-                        have the
-                        option to track their grades per class and see a visualization of study time to grade
-                        performance
-                        over a semester. Teachers will be able to use this app to set up different study events and
-                        companies can set-up study events as well. This will all be achievable through web browser,
-                        Android, and iOS applications. This project was the test run for our current project,
-                        Scholara.
-                    </p>
+                <!-- Homelab -->
+                <div class="project fade-up" id="homelab" data-skill="linux automation" tabindex="0">
+                    <div class="project-header">
+                        <span class="project-tag">Infrastructure</span>
+                        <h3><a href="homelab.html">Homelab →</a></h3>
+                    </div>
+                    <p>What started as a mild curiosity about networking snowballed into a full-blown self-hosting operation. Running Docker on a Raspberry Pi 5 with Pi-hole (blocking ~40% of all network requests), Jellyfin, recursive DNS via Unbound, and Tailscale for remote access. Currently upgrading to a Dell PowerEdge T320 server for expanded capacity.</p>
+                    <div class="project-stack">
+                        <span>Docker</span><span>Pi-hole</span><span>Unbound</span><span>Tailscale</span><span>Jellyfin</span>
+                    </div>
                 </div>
 
-                <div class="video-container">
-
-                    <video src="videos/Screen_recording_20241212_234307.webm" muted loop autoplay playsinline>
-
-                        Your browser does not support the video tag.
-                    </video>
-
-
+                <!-- StudyGo -->
+                <div class="project project-split fade-up" id="studygo" data-skill="java android-studio firebase" tabindex="0">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <span class="project-tag">Mobile App</span>
+                            <h3><a href="https://github.com/Renmoody/capstone" target="_blank" rel="noopener noreferrer">StudyGo →</a></h3>
+                        </div>
+                        <p class="project-date">September – December 2024</p>
+                        <p>An academic social media platform designed to improve student study habits and raise GPAs at participating universities. Features location-based study incentives, discount partnerships with local businesses, one-on-one and group study sessions, grade tracking with visualizations, and multi-platform support across Android, iOS, and Web.</p>
+                        <div class="project-stack">
+                            <span>Java</span><span>Android Studio</span><span>Firebase</span>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <video src="videos/Screen_recording_20241212_234307.webm" muted loop autoplay playsinline>
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-            </div>
-            <!-- Frooble Project -->
-            <div class="project" id="frooble" data-skill="python">
 
-                <h3>
-                    <a href="https://github.com/Renmoody/Frooble" target="_blank">
-                        Hoohacks Hackathon : Emergency Void Detection Program - Spring 2024
-                    </a>
-                </h3>
-
-                <!-- Left: text -->
-                <p>
-                    This application was built in a team of four people. Our team had 24 hours to code a project
-                    from scratch and compete for prizes.
-                    Our goal was to create an application that protected the public against harm. Our idea was
-                    Fruble.
-                    This project is geared towards public safety. Unfortunately, people end up in positions where
-                    they need help
-                    but cannot use their mobile device due to dangerous conditions.
-                    Our application uses audio detection software to allow the user to use a safe sentence.
-                    Doing so will alert local authorities and send an SMS message to contacts of their choosing
-                    along with
-                    their location with live updates.
-                    <br>
-                </p>
-
-
+                <!-- Frooble -->
+                <div class="project fade-up" id="frooble" data-skill="python" tabindex="0">
+                    <div class="project-header">
+                        <span class="project-tag">Hackathon &middot; Spring 2024</span>
+                        <h3><a href="https://github.com/Renmoody/Frooble" target="_blank" rel="noopener noreferrer">Frooble →</a></h3>
+                    </div>
+                    <p>Built in 24 hours at HooHacks with a team of four. Frooble is an emergency safety app that uses audio detection to let users trigger help alerts via a safe phrase — no phone interaction needed. Automatically notifies local authorities and sends live GPS location updates via SMS to chosen contacts.</p>
+                    <div class="project-stack">
+                        <span>Python</span><span>Audio Detection</span><span>SMS API</span><span>GPS</span>
+                    </div>
+                </div>
 
             </div>
+        </section>
+    </main>
 
-
+    <section id="contact">
+        <div class="container fade-up">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-intro">I'm actively looking for opportunities in software engineering, network engineering, and IT. Feel free to reach out via LinkedIn or email.</p>
+            <div class="contact-grid">
+                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/ren-moody</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Renmoody" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/Renmoody</span>
+                    </div>
+                </a>
+                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--resume">
+                    <i class="fas fa-file-pdf"></i>
+                    <div>
+                        <span class="contact-label">Resume</span>
+                        <span class="contact-value">Download PDF</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
-</main>
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ren Moody. All rights reserved.</p>
+            <p>Designed &amp; built by Ren Moody &copy; 2026</p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>

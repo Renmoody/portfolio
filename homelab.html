@@ -1,171 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ren Moody's personal portfolio website showcasing projects and experience in software development.">
-    <meta name="keywords"
-        content="Ren Moody, portfolio, software developer, projects, computer science, Christopher Newport University">
-    <title>Ren Moody Portfolio</title>
+    <meta name="description" content="Ren Moody's homelab journey — from Raspberry Pi to Dell PowerEdge.">
+    <title>Homelab — Ren Moody</title>
     <link rel="stylesheet" href="new_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <div class="header">
-            <h1>Homelab</h1>
-            <nav><a href="index.html" style="text-decoration: none">Home</a></nav>
+
+    <header class="site-header site-header--sub">
+        <div class="header-inner">
+            <div class="header-name">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back</a>
+                <span class="name-label">Homelab</span>
+            </div>
+            <p class="header-tagline">A running log of my self-hosting journey</p>
         </div>
     </header>
 
-    <section id=about>
-        <div class="container">
-            <img src="./images/pi.jpeg" alt="raspberrypi" class="profile-pic">
+    <section id="homelab-intro">
+        <div class="container fade-up">
+            <img src="./images/pi.jpeg" alt="Raspberry Pi" class="profile-pic">
             <div class="about-text">
                 <h2>The Beginning</h2>
-                <p>It all started when my brother began a networking class. I would hear him go on and on about data
-                    privacy and how big companies are basically farming us for information. The idea began to grow on me
-                    that maybe I should take a stand against this. And albeit a small stand. I started with my raspberry
-                    pi.</p>
+                <p>It all started when my brother began a networking class. I'd hear him talk about data privacy — how big companies were farming us for information. The idea grew on me that maybe I should do something about it. I started small, with my Raspberry Pi.</p>
             </div>
-    </section>
-    <section id="projects">
-        <div class="container">
-            <h2>Timeline</h2>
-            <div class="project" tabindex="0">
-                <h3>The past</h3>
-                <p>I had been aware of the raspberry pis' existence for quite some time. However, I only recently
-                    purchased one for myself. The reason being, I want to make a fun homelab. I have a background in
-                    computer and data science and having a playground at home with no disasterous reprecussions is a
-                    very nice bonus. I wont have to worry about my services having 100% uptime or data breaches and I
-                    can test out new ideas for automation and learning.</p>
-            </div>
-
-            <div class="project" tabindex="0">
-
-                <h3>The present</h3>
-                <ul>
-                    <li>
-                        <p>Currently, I have setup docker and pi-hole. I would like to learn more about vpn's and the
-                            risks
-                            associated with portforwarding before I move on to my next step, WireGuard. </p>
-                        <div class="img">
-                            <img src="./images/pi_stats.png" id="pi-stats">
-                        </div>
-                    </li>
-                    <li>
-                        <p>Along with pihole, I have configured a recursive DNS Cache using unbound. It was a bit of a
-                            hassle to
-                            set up because I am still learning my way around docker. Regardless, it's up and running
-                            now, my
-                            hurdle involved installing unbound natively instead of containerizing it. Then I had to
-                            learn more
-                            about the docker network and configure unbound to allow the docker network through. If I had
-                            done a
-                            little bit more research, I would have known to containerize unbound so that I could bridge
-                            the two
-                            which would lead to easier configuration of automation. (This is changed later)</p>
-                    </li>
-                    <li>
-                        <h3>Deprecated Idea</h3>
-                        The Raspberry Pi <span class="tooltip"
-                            data-tooltip="Network Attached Storage: Your own private cloud.">NAS</span></span> is coming
-                        along quite nicely. I have just obtained three 4TB Wester Digital Red Plus NAS <span
-                            class="tooltip" data-tooltip="Hard Disk Drive: Magnetic storage for your data.">HDDs</span>.
-                        With them I can use a penta SATA pi hat and 3d print a case for optimal cooling and aesthetic.
-                        I'll also be able to run RAID 5 configuration to help performance and allow for data redundancy.
-                    </li>
-                    <li>
-                        I have forgone the idea of building the pi into a personal NAS. Considering the fact that I will
-                        have up to 10 active users at any given time, I have decided to go with a Dell Poweredge T320.
-                        With this addition, I am going to be upgrading the rig that I'm getting (Facebook Marketplace
-                        Special). I will be putting a Intel Xeon E5-2470 V2 SR19S 2.4GHz 10 Cores 20 Threads Processor
-                        in there. Should be plenty capable for my plans. With that, I am also getting 48GB of DDR3 RAM.
-                    </li>
-                    <li> I successfully set up tailscale (temporary VPN access until I configure WireGuard) and it has
-                        been great! I was able to set my pi's tailnet IP as my global DNS Server which allows any device
-                        on the tailnet to have the Pihole benefits (ad blocking). Along with that, I reconfigured
-                        unbound so that it is in a docker container. The reason being is now I have cronjob scheduling
-                        to update the Gravity list for the pi, and update the containers at 4am every day. Also, any
-                        device can access my
-                        Jellyfin server and stream video's remotely! This is only the beginning, now that I have remote
-                        access to my homelab I can replicate services that I currently pay for, host my own servers for
-                        webpages or games, any much more!</li>
-                    </ol>
-            </div>
-            <div class="project" tabindex="0">
-                <h3>The New Lab</h3>
-
-                <div class="lab-intro-wrapper">
-                    <div class="lab-description">
-                        <ul>
-                            <li> Transitioning to the <strong>Dell PowerEdge T320</strong> was a massive leap forward.
-                                Moving away from the Raspberry Pi meant I finally had the PCIe lanes and ECC RAM
-                                necessary for a stable ZFS pool and multiple heavy Docker containers without
-                                hitting a hardware bottleneck every time someone started a stream.</li>
-                        </ul>
-                    </div>
-                    <div class="lab-image-container">
-                        <img src="./images/lab.jpeg" id="lab-img" alt="Dell Poweredge T320">
-                    </div>
-                </div>
-
-                <div class="lab-details-full">
-                    <ul>
-                        <li> With 10 cores and 48GB of RAM, this machine now handles media
-                            streaming via Jellyfin, and even a few game servers for friends. The goal is full
-                            service independence, and this hardware is the foundation that makes it possible
-                            to host everything locally with zero subscription fees. Next on the to-do list is cloud
-                            storage for files and images, which I have already laid the groundwork for.
-                        </li>
-                    </ul>
-                    <h3>The Software</h3>
-                    <ul>
-                        <li>
-                            To manage the server I am running Cockpit, which runs on top of Linux LTS. This provides a
-                            GUI for me to perform tasks that would take much longer in the command line. Although I
-                            still get plenty of time in the CLI through my management and creation of docker containers
-                            and scripting.
-                        </li>
-                    </ul>
-                    <div class="lab-image-container"><img src="./images/Cockpit.PNG" id="lab-img" alt="Cockpit"></div>
-
-
-                </div>
-            </div>
-
-            <div>
-
-            </div>
-
-            <div class="project" tabindex="0">
-                <h3>The future</h3>
-                <ul>
-                    <li>
-                        <h3>Deprecated Plan</h3>
-                        To be able to contain my NAS, I will be 3d printing a case for it. There is a design I found
-                        online
-                        that allows for hot swappable drive bays, and good cooling. My biggest concern with this NAS is
-                        that
-                        the Pi runs quite hot. Heat and HDD's do not mix well and I would like their lifespan to be as
-                        long
-                        as possible.
-                    </li>
-                    <li>
-                        I will be documenting the T320 build on here! I plan on upgrading my home network security and
-                        also turning my old house into a smart home. Along with that, I am hoping to achieve full
-                        service independence (at least from subscription services). I'll be sharing my triumphs and
-                        challenges during this journey and I hope some people follow along!
-                    </li>
-                </ul>
-            </div>
-            <!-- Congratulations for looking through my src code -->
         </div>
     </section>
+
+    <section id="timeline-section">
+        <div class="container">
+            <h2 class="section-title fade-up">Timeline</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label past">Past</span>
+                        <h3>The Spark</h3>
+                        <p>I'd been aware of Raspberry Pis for a while, but only recently pulled the trigger. The appeal: a low-stakes playground. With a background in computer and data science, having a home environment to experiment with automation and new ideas — with no uptime requirements or breach consequences — was exactly what I wanted.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label present">Present</span>
+                        <h3>Pi-hole + Recursive DNS</h3>
+                        <p>Set up Docker and Pi-hole, then configured a recursive DNS cache using Unbound. There was a learning curve — I initially installed Unbound natively instead of containerizing it, which made bridging with Docker more complex. Eventually containerized everything, enabling cleaner automation via cronjob scheduling (gravity list + container updates at 4am daily).</p>
+                        <div class="img">
+                            <img src="./images/pi_stats.png" alt="Raspberry Pi stats dashboard">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label present">Present</span>
+                        <h3>Tailscale + Remote Access</h3>
+                        <p>Successfully set up Tailscale as a temporary VPN solution (WireGuard is next). Configured my Pi's tailnet IP as a global DNS server so any device on the network benefits from Pi-hole ad blocking. Now streaming video remotely through Jellyfin. With remote access established, the possibilities have expanded significantly.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker deprecated"></div>
+                    <div class="timeline-card deprecated-card">
+                        <span class="timeline-label deprecated">Deprecated</span>
+                        <h3>Pi NAS Plan</h3>
+                        <p>Originally planned to build a Raspberry Pi NAS using three 4TB WD Red Plus HDDs, a penta SATA hat, and a 3D-printed case with hot-swappable drive bays and RAID 5. Thermal concerns — the Pi runs hot and heat kills HDDs — combined with needing to support up to 10 active users led me to rethink the approach entirely.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label present">Present</span>
+                        <h3>Dell PowerEdge T320</h3>
+                        <div class="timeline-split">
+                            <div class="timeline-split-text">
+                                <p>Transitioning to the Dell PowerEdge T320 was a major leap. Moving off the Pi finally gave me the PCIe lanes and ECC RAM needed for a stable ZFS pool and multiple heavy Docker containers without hitting a hardware ceiling. Upgraded with an Intel Xeon E5-2470 V2 (10 cores / 20 threads, 2.4GHz) and 48GB DDR3 RAM. With that headroom, the server now handles Jellyfin media streaming and game servers for friends simultaneously — with room to grow.</p>
+                            </div>
+                            <div class="timeline-split-img">
+                                <img src="./images/lab.jpeg" alt="Dell PowerEdge T320">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label present">Present</span>
+                        <h3>Cockpit + Linux LTS</h3>
+                        <p>Managing the T320 via Cockpit running on Linux LTS. It provides a web GUI for tasks that would take longer at the command line, though I still spend plenty of time in the CLI — writing Docker container configs, shell scripts, and automation. Goal is full service independence from subscription services, and the groundwork for self-hosted cloud storage is already in place.</p>
+                        <div class="img">
+                            <img src="./images/Cockpit.PNG" alt="Cockpit dashboard">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-marker future"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-label future">Future</span>
+                        <h3>What's Next</h3>
+                        <p>Documenting the T320 build right here. Planning to upgrade home network security, turn my old house into a smart home, and achieve full independence from subscription services. WireGuard VPN is up next. I'll be sharing every triumph and challenge along the way.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Designed &amp; built by Ren Moody &copy; 2026</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
