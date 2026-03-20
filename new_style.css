@@ -725,6 +725,7 @@ main { position: relative; }
     object-fit: cover;
 }
 
+
 .img {
     margin-top: 1.2rem;
     border-radius: var(--radius-sm);
