@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ren Moody — CS Graduate, Software Developer, and Homelab Builder.">
-    <meta name="keywords" content="Ren Moody, portfolio, software developer, computer science, Christopher Newport University">
+    <meta name="keywords"
+        content="Ren Moody, portfolio, software developer, computer science, Christopher Newport University">
     <title>Ren Moody</title>
     <link rel="stylesheet" href="new_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <header class="site-header">
@@ -17,15 +20,19 @@
                 <span class="name-label">Ren Moody</span>
                 <span class="status-badge">Open to Work</span>
             </div>
-            <p class="header-tagline"><span class="prompt">&gt;_</span> CS Graduate &middot; Software Developer &middot; Homelab Builder</p>
+            <p class="header-tagline"><span class="prompt">&gt;_</span> CS Graduate &middot; Junior Analyst &middot;
+                Software Developer</p>
             <nav class="header-nav">
-                <a href="https://github.com/Renmoody" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href="https://github.com/Renmoody" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Resume" class="resume-nav-link">
+                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer"
+                    aria-label="Download Resume" class="resume-nav-link">
                     <i class="fas fa-file-pdf"></i> Resume
                 </a>
             </nav>
@@ -37,14 +44,22 @@
             <img src="./images/pfp2.png" alt="Ren Moody" class="profile-pic">
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>I'm a Computer Science graduate of Christopher Newport University (December 2025), seeking roles in software engineering, network engineering, and IT. My background spans full-stack development, backend systems, and network infrastructure — with hands-on experience running self-hosted services and managing home network architecture.</p>
+                <p>I'm a Computer Science graduate of Christopher Newport University (December 2025) with a minor in
+                    Data Science, targeting junior analyst and data-focused roles. I bring both technical depth and
+                    strong people skills — I served as lead developer on a 3-person capstone team and presented the
+                    project to a faculty panel, have spent plenty of time in customer-facing roles at CPR Cell Phone Repair, Advance Auto Parts, and as
+                    an Eagle Scout I organized and executed a 20-person community build project from planning to
+                    completion. I'm the kind of person who can work a room as easily as a codebase.</p>
                 <div class="about-meta">
-                    <span class="about-meta-item"><i class="fas fa-graduation-cap"></i> B.S. Computer Science &mdash; CNU, Dec 2025</span>
+                    <span class="about-meta-item"><i class="fas fa-graduation-cap"></i> B.S. Computer Science &mdash;
+                        CNU, Dec 2025</span>
                     <span class="about-meta-item"><i class="fas fa-map-marker-alt"></i> Virginia, USA</span>
+                    <span class="about-meta-item"><i class="fas fa-medal"></i> Eagle Scout</span>
                 </div>
                 <div class="target-roles">
+                    <span class="role-tag">Junior Analyst</span>
                     <span class="role-tag">Software Engineer</span>
-                    <span class="role-tag">Network Engineer</span>
+                    <span class="role-tag">Data Science</span>
                     <span class="role-tag">IT / Systems</span>
                 </div>
             </div>
@@ -59,11 +74,11 @@
             <p class="skills-sub">Click a skill to see it in action</p>
             <div class="skills-hub">
                 <a href="#homelab" class="skill-tag" data-skill="linux" proj="homelab">Linux / Networking</a>
-                <a href="#homelab" class="skill-tag" data-skill="automation" proj="homelab">Automation</a>
                 <a href="#studygo" class="skill-tag" data-skill="java" proj="studygo">Java</a>
-                <a href="#studygo" class="skill-tag" data-skill="android-studio" proj="studygo">Android Studio</a>
                 <a href="#studygo" class="skill-tag" data-skill="firebase" proj="studygo">Firebase</a>
                 <a href="#frooble" class="skill-tag" data-skill="python" proj="frooble">Python</a>
+                <a href="#stockdashboard" class="skill-tag" data-skill="javascript" proj="stockdashboard">JavaScript</a>
+                <a href="#stockdashboard" class="skill-tag" data-skill="dataviz" proj="stockdashboard">Data Viz</a>
             </div>
         </div>
     </section>
@@ -73,50 +88,82 @@
             <div class="container">
                 <h2 class="section-title fade-up">Projects</h2>
 
-                <!-- Homelab -->
-                <div class="project fade-up" id="homelab" data-skill="linux automation" tabindex="0">
-                    <div class="project-header">
-                        <span class="project-tag">Infrastructure</span>
-                        <h3><a href="homelab.html">Homelab →</a></h3>
-                    </div>
-                    <p>What started as a mild curiosity about networking snowballed into a full-blown self-hosting operation. Running Docker on a Raspberry Pi 5 with Pi-hole (blocking ~40% of all network requests), Jellyfin, recursive DNS via Unbound, and Tailscale for remote access. Currently upgrading to a Dell PowerEdge T320 server for expanded capacity.</p>
-                    <div class="project-stack">
-                        <span>Docker</span><span>Pi-hole</span><span>Unbound</span><span>Tailscale</span><span>Jellyfin</span>
-                    </div>
-                </div>
+                <div class="projects-grid">
 
-                <!-- StudyGo -->
-                <div class="project project-split fade-up" id="studygo" data-skill="java android-studio firebase" tabindex="0">
-                    <div class="project-info">
+                    <!-- StudyGo — featured full-width -->
+                    <div class="project project-split project--featured fade-up" id="studygo"
+                        data-skill="java android-studio firebase" tabindex="0">
+                        <div class="project-info">
+                            <div class="project-header">
+                                <span class="project-tag">Capstone &middot; Mobile App</span>
+                                <h3><a href="https://github.com/Renmoody/capstone" target="_blank"
+                                        rel="noopener noreferrer">StudyGo →</a></h3>
+                            </div>
+                            <p class="project-date">September – December 2024</p>
+                            <p>Led Android development on a 3-person capstone team, building an academic social media
+                                platform from scratch and presenting it to a faculty review panel. The app connects
+                                students, professors, and partner businesses to improve study habits and raise GPAs —
+                                with features including location-based study incentives, group sessions, discount
+                                partnerships with local businesses, grade tracking with visualizations, and role-based
+                                accounts across Android and Web.</p>
+                            <div class="project-stack">
+                                <span>Java</span><span>Android Studio</span><span>Firebase</span><span>Team of 3</span>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <video src="videos/Screen_recording_20241212_234307.webm" muted loop autoplay playsinline>
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Homelab -->
+                    <div class="project fade-up" id="homelab" data-skill="linux" tabindex="0">
                         <div class="project-header">
-                            <span class="project-tag">Mobile App</span>
-                            <h3><a href="https://github.com/Renmoody/capstone" target="_blank" rel="noopener noreferrer">StudyGo →</a></h3>
+                            <span class="project-tag">Infrastructure</span>
+                            <h3><a href="homelab.html">Homelab →</a></h3>
                         </div>
-                        <p class="project-date">September – December 2024</p>
-                        <p>An academic social media platform designed to improve student study habits and raise GPAs at participating universities. Features location-based study incentives, discount partnerships with local businesses, one-on-one and group study sessions, grade tracking with visualizations, and multi-platform support across Android, iOS, and Web.</p>
+                        <p>What started as a mild curiosity about networking snowballed into a full-blown self-hosting
+                            operation. Running Docker on a Raspberry Pi 5 with Pi-hole (blocking ~40% of all network
+                            requests), Jellyfin, recursive DNS via Unbound, and Tailscale for remote access. Currently
+                            upgrading to a Dell PowerEdge T320 server for expanded capacity.</p>
                         <div class="project-stack">
-                            <span>Java</span><span>Android Studio</span><span>Firebase</span>
+                            <span>Docker</span><span>Pi-hole</span><span>Unbound</span><span>Tailscale</span><span>Jellyfin</span>
                         </div>
                     </div>
-                    <div class="video-container">
-                        <video src="videos/Screen_recording_20241212_234307.webm" muted loop autoplay playsinline>
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
 
-                <!-- Frooble -->
-                <div class="project fade-up" id="frooble" data-skill="python" tabindex="0">
-                    <div class="project-header">
-                        <span class="project-tag">Hackathon &middot; Spring 2024</span>
-                        <h3><a href="https://github.com/Renmoody/Frooble" target="_blank" rel="noopener noreferrer">Frooble →</a></h3>
+                    <!-- Frooble -->
+                    <div class="project fade-up" id="frooble" data-skill="python" tabindex="0">
+                        <div class="project-header">
+                            <span class="project-tag">Hackathon &middot; Spring 2024</span>
+                            <h3><a href="https://github.com/Renmoody/Frooble" target="_blank"
+                                    rel="noopener noreferrer">Frooble →</a></h3>
+                        </div>
+                        <p>Built in 24 hours at HooHacks with a team of four. Frooble is an emergency safety app that
+                            uses audio detection to let users trigger help alerts via a safe phrase — no phone
+                            interaction needed. Automatically notifies local authorities and sends live GPS location
+                            updates via SMS to chosen contacts.</p>
+                        <div class="project-stack">
+                            <span>Python</span><span>Audio Detection</span><span>SMS API</span><span>GPS</span>
+                        </div>
                     </div>
-                    <p>Built in 24 hours at HooHacks with a team of four. Frooble is an emergency safety app that uses audio detection to let users trigger help alerts via a safe phrase — no phone interaction needed. Automatically notifies local authorities and sends live GPS location updates via SMS to chosen contacts.</p>
-                    <div class="project-stack">
-                        <span>Python</span><span>Audio Detection</span><span>SMS API</span><span>GPS</span>
-                    </div>
-                </div>
 
+                    <!-- Stock Dashboard -->
+                    <div class="project fade-up" id="stockdashboard" data-skill="javascript dataviz" tabindex="0">
+                        <div class="project-header">
+                            <span class="project-tag">Personal &middot; Summer 2025</span>
+                            <h3><a href="https://github.com/Renmoody" target="_blank" rel="noopener noreferrer">Stock
+                                    Dashboard →</a></h3>
+                        </div>
+                        <p>A dynamic browser-based stock dashboard built with Chart.js. Tracks real-time prices with
+                            customizable ticker input, displays current price and percentage change, and renders an
+                            auto-refreshing line chart — designed to run as a live wallpaper via Wallpaper Engine.</p>
+                        <div class="project-stack">
+                            <span>JavaScript</span><span>Chart.js</span><span>HTML/CSS</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
     </main>
@@ -124,9 +171,11 @@
     <section id="contact">
         <div class="container fade-up">
             <h2 class="section-title">Contact</h2>
-            <p class="contact-intro">I'm actively looking for opportunities in software engineering, network engineering, and IT. Feel free to reach out via LinkedIn or email.</p>
+            <p class="contact-intro">I'm actively looking for junior analyst, software engineering, and IT
+                opportunities. I love talking through problems — feel free to reach out via LinkedIn or email.</p>
             <div class="contact-grid">
-                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <a href="https://www.linkedin.com/in/ren-moody/" target="_blank" rel="noopener noreferrer"
+                    class="contact-card">
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <span class="contact-label">LinkedIn</span>
@@ -140,7 +189,8 @@
                         <span class="contact-value">github.com/Renmoody</span>
                     </div>
                 </a>
-                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer" class="contact-card contact-card--resume">
+                <a href="./documents/Ren_Moody_Resume_9.16.pdf" target="_blank" rel="noopener noreferrer"
+                    class="contact-card contact-card--resume">
                     <i class="fas fa-file-pdf"></i>
                     <div>
                         <span class="contact-label">Resume</span>
@@ -159,4 +209,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
